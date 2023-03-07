@@ -1,0 +1,9 @@
+BasedOnStyle: Google
+IndentWidth: 4
+ColumnLimit: 0 
+BreakBeforeBraces: Custom
+BraceWrapping:
+    BeforeElse: true
+    BeforeCatch: true
+    BeforeLambdaBody: true
+    BeforeWhile: true
