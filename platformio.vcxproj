@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Path>C:/Program Files/Common Files/Oracle/Java/javapath;c:/program files (x86)/common files/oracle/java/javapath;c:/windows/system32;c:/windows;c:/windows/system32/wbem;c:/windows/system32/windowspowershell/v1.0/;c:/windows/system32/openssh/;c:/program files/putty/;C:/Program Files (x86)/NVIDIA Corporation/PhysX/Common;C:/WINDOWS/system32;C:/WINDOWS;C:/WINDOWS/System32/Wbem;C:/WINDOWS/System32/WindowsPowerShell/v1.0/;C:/WINDOWS/System32/OpenSSH/;$(HOMEDRIVE)$(HOMEPATH)/AppData/Local/Programs/Python/Python311/Scripts/;$(HOMEDRIVE)$(HOMEPATH)/AppData/Local/Programs/Python/Python311/;$(HOMEDRIVE)$(HOMEPATH)/AppData/Local/Microsoft/WindowsApps;$(HOMEDRIVE)$(HOMEPATH)/AppData/Local/Programs/Microsoft VS Code/bin;</Path>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0FA9C3A8-452B-41EF-A418-9102B170F49F}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>platformio -f -c visualstudio run</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>platformio -f -c visualstudio run --target clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>PLATFORMIO=60106;ARDUINO_AVR_UNO;F_CPU=16000000L;ARDUINO_ARCH_AVR;ARDUINO=10808;__AVR_ATmega328P__</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/include;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/src;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/lib/LCDKeypad;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/lib/SparkFun_SCD30_Arduino_Library-1.0.20/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/Wire/src;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/.pio/libdeps/uno/LiquidCrystal/src;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/.pio/libdeps/uno/Ethernet/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/SPI/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/cores/arduino;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/variants/standard;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/HID/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include-fixed;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/avr/include</NMakeIncludeSearchPath>
+    <ExecutablePath>$(HOMEDRIVE)$(HOMEPATH)\.platformio\penv\Scripts</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>platformio run</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>platformio run --target clean</NMakeCleanCommandLine>
+    <NMakePreprocessorDefinitions>PLATFORMIO=60106;ARDUINO_AVR_UNO;F_CPU=16000000L;ARDUINO_ARCH_AVR;ARDUINO=10808;__AVR_ATmega328P__</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/include;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/src;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/lib/LCDKeypad;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/lib/SparkFun_SCD30_Arduino_Library-1.0.20/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/Wire/src;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/.pio/libdeps/uno/LiquidCrystal/src;$(HOMEDRIVE)$(HOMEPATH)/Documents/PlatformIO/Projects/NetworkedCO2Sensor/.pio/libdeps/uno/Ethernet/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/SPI/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/cores/arduino;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/variants/standard;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/HID/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/7.3.0/include-fixed;$(HOMEDRIVE)$(HOMEPATH)/.platformio/packages/toolchain-atmelavr/avr/include</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <None Include="platformio.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src/main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src/network_stats.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src/prometheus-server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src/screen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
